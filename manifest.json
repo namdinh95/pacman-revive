@@ -1,0 +1,16 @@
+{
+"manifest_version": 2,
+    "name": "Pacman Replacement",
+    "description": "Replace the pacman shorthand to Pacman emoticon",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.facebook.com/*"
+            ],
+            "js": [
+                "my-content.js"
+            ]
+        }
+    ]
+}
