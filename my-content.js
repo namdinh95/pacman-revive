@@ -1,20 +1,24 @@
 const PACMAN_LENGTH = 2;
-const INPUT_BOX = "_552h";
+const INPUT_BOX = "_1mf _1mj";
 
 function replacePacman() {
-  var elements = document.getElementsByClassName('fbNubGroup clearfix videoCallEnabled')[0].getElementsByTagName("*");
+  var elements = [];
+  if (document.location.host === "www.facebook.com")
+    elements = document.getElementsByClassName("fbNubGroup clearfix videoCallEnabled")[0].getElementsByTagName("*");
+  else if (document.location.host === "www.messenger.com")
+    elements = document.getElementsByTagName("*");
   var startCheckParent = false; 
 
   for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
-    
+
     // Only start checking when traverse to input box
     if (element.className === INPUT_BOX)
       startCheckParent = true;
 
     for (var j = 0; j < element.childNodes.length; j++) {
       var node = element.childNodes[j];
-      
+
       // Ignore input box and all its children
       if (startCheckParent)
         if (checkParent(node, INPUT_BOX))

@@ -1,4 +1,3 @@
-# This extension brings back the now-removed pacman emoticon in Facebook chat
-The extension now works with Facebook web chat. 
+# Bring back the now-removed pacman emoticon in Facebook chat
+This Chrome extension now works with both Facebook web chat and Messenger web chat. 
 
-TODO: Test with messenger platform.
